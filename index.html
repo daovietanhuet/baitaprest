@@ -59,7 +59,7 @@
         Object.keys(child).forEach(function(k) {
             var cell = row.insertCell();
             if(k === "name") {
-                cell.innerHTML = `<a href=${'https://soa.anhdhbn.repl.co/students/' + child['id']}>${child[k]}</a>`
+                cell.innerHTML = `<a href=${'https://daovietanhuet.github.io/baitaprest/?studentId=' + child['id']}>${child[k]}</a>`
             } else {
                 cell.appendChild(document.createTextNode(JSON.stringify(child[k])));
             }

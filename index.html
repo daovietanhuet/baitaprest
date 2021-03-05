@@ -21,9 +21,15 @@
 <div id="container"></div>
 <script>
     const urlParams = new URLSearchParams(window.location.search);
-    const myParam = urlParams.get('studentId');
+    const studentId = urlParams.get('studentId');
+    let id = ""
+    if (studentId) {
+        id = studentId
+    } else {
+        studentId = ""
+    }
 
-    fetch('https://soa.anhdhbn.repl.co/students/')
+    fetch('https://soa.anhdhbn.repl.co/students/' + id)
     .then(json => {
         return json.json()
     })

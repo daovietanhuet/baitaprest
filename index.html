@@ -34,7 +34,11 @@
         return json.json()
     })
     .then(res => {
-        var children = res;
+        var children 
+        if(studentId) 
+            children = [res]
+        else 
+            children = res
 
         function addHeaders(table, keys) {
         var row = table.insertRow();

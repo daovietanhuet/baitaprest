@@ -28,8 +28,7 @@
         return json.json()
     })
     .then(res => {
-        console.log(res)
-        var children = [{num: 6, name: 'me', phone: 7}, {num: 8, name: 'him', phone: 9}];
+        var children = res;
 
         function addHeaders(table, keys) {
         var row = table.insertRow();
@@ -48,7 +47,6 @@
         }
         var row = table.insertRow();
         Object.keys(child).forEach(function(k) {
-            console.log(k);
             var cell = row.insertCell();
             cell.appendChild(document.createTextNode(child[k]));
         })

@@ -58,7 +58,11 @@
         var row = table.insertRow();
         Object.keys(child).forEach(function(k) {
             var cell = row.insertCell();
-            cell.appendChild(document.createTextNode(JSON.stringify(child[k])));
+            if(child === "name") {
+                cell.innerHTML = `<a href=${'https://soa.anhdhbn.repl.co/students/' + child['id']}>${child[k]}</a>`
+            } else {
+                cell.appendChild(document.createTextNode(JSON.stringify(child[k])));
+            }
         })
         }
 

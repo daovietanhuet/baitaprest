@@ -48,7 +48,7 @@
         var row = table.insertRow();
         Object.keys(child).forEach(function(k) {
             var cell = row.insertCell();
-            cell.appendChild(document.createTextNode(child[k]));
+            cell.appendChild(document.createTextNode(JSON.stringify(child[k])));
         })
         }
 
